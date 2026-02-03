@@ -3,7 +3,7 @@
 	templateRole: song
 	model: Stream
 	label: Song
-	extends: ["base-social", "base-intent", "bandwagon-common"]
+	extends: ["base-social", "base-intent", "blankpage-common"]
 	containedBy: ["album"]
 
 	states: {

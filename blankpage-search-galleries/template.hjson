@@ -1,0 +1,40 @@
+{
+	templateId: blankpage-search-galleries
+	templateRole: search
+	extends: ["blankpage-search", "blankpage-common"]
+	model: Stream
+	containedBy: ["top"]
+	icon: book
+	label: Bandbook Gallery Search
+	description: Search Engine for Galleries
+	schema: {
+		type:object
+		properties: {
+			label: {type:"string"}
+			summary: {type:"string"}
+			data: {
+				type:object
+				properties: {
+					searchText: {type:"string"}
+					content: {type:"string"}
+				}
+			}
+		}    
+	}
+
+	actions: {
+		view-galleries: {
+			roles: ["anonymous"]
+			steps: [
+				{do:"view-html"}
+			]
+		}
+
+		feed: {
+			roles: ["anonymous"]
+			steps: [
+				{do:"view-feed", search-types:["Gallery"]}
+			]
+		}
+	}
+}
