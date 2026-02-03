@@ -1,0 +1,61 @@
+{
+	templateId: blankpage-common
+	model: None
+	templateRole: gallery
+	containedBy: []
+	extends: []
+	label: BlankPage Common
+	description: Common elements for BlankPage apps
+
+	states: {
+		default: {
+			label: Default
+			description: Default state for Blank Common
+		}
+	}
+
+	datasets: {
+		"licenses": [
+			{value:"COPYRIGHT", label:"All Rights Reserved", icon:"copyright"},
+			{value:"CC-BY", label:"Creative Commons - Attribution", href:"https://creativecommons.org/licenses/by/4.0/", icon:"cc-by"}
+			{value:"CC-BY-NC", label:"Creative Commons - Attribution - Non Commercial", href:"https://creativecommons.org/licenses/by-nc/4.0/", icon:"cc-by-nc"}
+			{value:"CC-BY-NC-ND", label:"Creative Commons - Attribution - Non Commercial - No Derivatives", href:"https://creativecommons.org/licenses/by-nc-nd/4.0/", icon:"cc-by-nc-nd"}
+			{value:"CC-BY-NC-SA", label:"Creative Commons - Attribution - Non Commercial - Share Alike", href:"https://creativecommons.org/licenses/by-nc-sa/4.0/", icon:"cc-by-nc-sa"}
+			{value:"CC-BY-ND", label:"Creative Commons - Attribution - No Derivatives ", href:"https://creativecommons.org/licenses/by-nd/4.0/", icon:"cc-by-nd"}
+			{value:"CC-BY-SA", label:"Creative Commons - Attribution - Share Alike", href:"https://creativecommons.org/licenses/by-sa/4.0/", icon:"cc-by-sa"}
+			{value:"CC0", label:"Creative Commons Zero - No Rights Reserved", href:"https://creativecommons.org/public-domain/cc0/", icon:"cc0"}
+			{value:"PUBLIC-DOMAIN", label:"Public Domain", href:"https://creativecommons.org/publicdomain/mark/1.0/", icon:"public-domain"}
+		]
+		"categories": [
+			{value:"DIGITAL", label:"Digital Art", icon:"bezier"}
+			{value:"TRADITIONAL", label:"Traditional Media", icon:"pencil-fill"}
+			{value:"ANIMATED", label:"Animated", icon:"balloon"}
+			{value:"FANART", label:"Fan Art", icon:"clipboard2-heart"}
+			{value:"FRACTAL", label:"Fractals", icon:"flower2"}
+			{value:"ARTISAN", label:"Artisan Crafts", icon:"tools"}
+			{value:"STOCK-IMAGE", label:"Stock Art", icon:"transparency"}
+			{value:"PHOTOGRAPHY", label:"Photography", icon:"camera"}
+			{value:"MIXED-MEDIA", label:"Mixed Media", icon:"regex"}
+			{value:"COMIC", label:"Comics and Graphic Novels",  icon:"journal-richtext"}
+			{value:"COSPLAY", label:"Cosplay", icon:"person-arms-up"}
+			{value:"AUDIO", label:"Audio",  icon:"music-note"}
+			{value:"FICTION", label:"Fiction",  icon:"book-half"}
+			{value:"FANFIC", label:"Fan Fiction",  icon:"clipboard2-heart"}
+			{value:"NON-FICTION", label:"Non-Fiction",  icon:"book"}
+			{value:"POETRY-LYRICS", label:"Poetry and Lyrics", icon:"vector-pen"}
+			{value:"PROGRAM", label:"Programs and Applications", icon:"code-slash"}
+		]
+		"genres": [
+			{value:"HORROR", label:"Horror"}
+			{value:"SCIFI", label:"Science Fiction"}
+			{value:"FANTASY", label:"Fantasy"}
+			{value:"HUMOR", label:"HUMOR"}
+			{value:"DARK", label:"Dark"}
+			{value:"LIFESTYLE", label:"Lifestyles"}
+			{value:"ACTION", label:"Action and Adventure"}
+			{value:"ROMANCE", label:"Romance"}
+			{value:"MYSTERY", label:"Crime and Mystery"}
+			{value:"HISTORY", label:"History"}
+		]
+	}
+}
