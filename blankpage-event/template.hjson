@@ -19,7 +19,7 @@
 	states: {
 		default: {
 			label: Unpublished,
-			description: This item is only visible to hubbers and site owners.
+			description: This item is only visible to artists and site owners.
 		}
 		published: {
 			label: Published,
