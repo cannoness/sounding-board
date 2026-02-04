@@ -263,6 +263,12 @@
 								<div class="align-center text-lg margin-none margin-bottom bold link">Add a Bandwagon Album</div>
 								<div class="align-center text-sm text-gray">You can publish your profile after you've uploaded at least one gallery or album</div>
 							</div>
+							<div hx-get="/@me/settings/import" class="hover-swell rounded card flex-column flex-center padding-vertical padding-horizontal" role="button">
+								<div class="align-center margin-none link" style="font-size:64px;" aria-hidden="true">{{icon "database-down"}}</div>
+								<div class="align-center margin-none margin-top bold link">Next Step:</div>
+								<div class="align-center text-lg margin-none margin-bottom bold link">Import Your Data</div>
+								<div class="align-center text-sm text-gray">If you have data on another Bandwagon server, click here to migrate.</div>
+							</div>
 						{{- end -}}
 					</div>
 				{{- end -}}
@@ -312,7 +318,7 @@
 												&nbsp;{{- $time -}}
 											{{- end -}}
 											<br>
-											{{$event.Places.First.Name}}<br>
+											{{$event.Location.Name}}<br>
 										</div>
 										<div class="hide sm:show">
 											<span class="bold link">More Info &rarr;</span>
