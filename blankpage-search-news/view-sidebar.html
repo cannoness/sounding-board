@@ -1,9 +1,9 @@
 {{- $query := .QueryParam "q" -}}
 
 <div class="flex-row md:flex-column">
-	<a href="/hubbers?q={{$query}}" hx-boost="true" class="search-navigation turboclick">Artists</a>
-	<a href="/galleries?q={{$query}}" hx-boost="true" class="search-navigation turboclick">Albums</a>
-	<a href="/works?q={{$query}}" hx-boost="true" class="search-navigation turboclick">Tracks</a>
+	<a href="/hubbers?q={{$query}}" hx-boost="true" class="search-navigation turboclick">Bands</a>
+	<a href="/galleries?q={{$query}}" hx-boost="true" class="search-navigation turboclick">Galleries</a>
+	<a href="/tracks?q={{$query}}" hx-boost="true" class="search-navigation turboclick">Tracks</a>
 	<a href="/events?q={{$query}}" hx-boost="true" class="search-navigation turboclick">Calendar</a>
 	<a href="/news/" hx-boost="true" class="search-navigation turboclick selected">News</a>
 </div>
