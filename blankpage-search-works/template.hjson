@@ -6,7 +6,7 @@
 	containedBy: ["top"]
 	icon: book
 	label: BandBook Work Search
-	description: Search Engine for Works
+	description: Search Engine for Photos
 	schema: {
 		type:object
 		properties: {
