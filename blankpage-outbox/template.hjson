@@ -170,7 +170,7 @@
 					style: inline
 					location: outbox
 					template: blankpage-event
-					title: + Add a Creation
+					title: + Add a Photo
 					set-permissions: {copy:true, editor:["self"]}
 					with-data:{data.tags:"{{.Data `tags`}}"}
 				}

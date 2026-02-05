@@ -276,7 +276,7 @@
 					do: add-stream
 					style: inline
 					location: child
-					title: + Add a Creation
+					title: + Add a Photo
 					type:blankpage-creation
 					template: blankpage-creation
 					with-data:{

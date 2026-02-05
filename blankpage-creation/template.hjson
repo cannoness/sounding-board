@@ -139,14 +139,14 @@
 							options: ["delete:/{{.StreamID}}/delete"]
 							form:{
 								type: layout-tabs
-								label: "Edit Creation"
+								label: "Edit Photo"
 								children: [
 									{
 										type: layout-vertical
 										label: General
 										children: [
-											{type: "text",   path: "label", label: "Creation Title"}
-											{type: "upload", path: "data.attachmentId", label: "Artwork File", options:{filename:"data.attachmentFilename", accept:"image/*",  rules:{types:["webp", "jpg", "jpeg", "png", "gif"]}}}
+											{type: "text",   path: "label", label: "Title"}
+											{type: "upload", path: "data.attachmentId", label: "Photo", options:{filename:"data.attachmentFilename", accept:"image/*",  rules:{types:["webp", "jpg", "jpeg", "png", "gif"]}}}
 											{type: "upload", path: "iconUrl", label:"Preview Thumbnail", options:{accept:"image/*", filename:"data.imageFilename", delete:"/{{.StreamID}}/delete-icon", rules:{width:200, height:200, types:["webp", "jpg", "jpeg", "png", "gif"]}}}
 											{type: "toggle", path: "isFeatured", options:{true-text:"Featured. Highlighted on work list", false-text:"Featured?"}}
 										]
@@ -214,7 +214,7 @@
 		delete: {
 			roles: ["author", "contributer"],
 			steps: [
-				{do:"delete", title:"Delete this Creation?"}
+				{do:"delete", title:"Delete this Photo?"}
 				{do:"forward-to", url:"/{{.ParentID}}"}
 			]
 		}
