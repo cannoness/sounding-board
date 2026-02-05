@@ -3,7 +3,6 @@
 {{- $icon := .IconURL -}}
 {{- $creations := .Children.Top120.ByRank.Slice -}}
 {{- $canEdit := .UserCan "edit" -}}
-{{- $isContributer := .UserHasRole "contributer" -}}
 {{- $links := .Data "links" -}}
 {{- range $index, $creation := $creations -}}
 	{{- if not .IconURL -}}
@@ -51,7 +50,7 @@
 	<!-- Header and Info Row -->
 	<div class="md:flex-row pos-relative padding">
 
-		{{- if or $canEdit $isContributer -}}
+		{{- if $canEdit -}}
 			<div class="pos-absolute-top-right text-sm">
 				<button hx-get="/{{.StreamID}}/add-creation">{{icon "plus"}}Add Photo</button>
 				<button hx-get="/{{.StreamID}}/edit">Edit Gallery</button>
@@ -71,17 +70,27 @@
 			</div>
 		{{- end -}}
 
-
+		{{- if $canEdit -}}
 		<div hx-get="/{{.StreamID}}/edit" role="button" class="md:width-10% lg:width-20% md:margin-right-md flex-grow-0 flex-shrink-0 margin-bottom-md rounded pos-relative">
 			{{- if ne "" .IconURL -}}
 				<img id="gallery-icon" src="{{ .IconURL }}" class="width-100% rounded square" aria-hidden="true" style="view-transition-name: icon-{{.StreamID}};">
-			{{- else if $canEdit -}}
+			{{- else -}}
 				<div class="rounded width-100% square text-center flex-column flex-justify-center flex-align-center text-gray" style="border:solid 1px var(--black)" script="install blockselect()">
 					Click here to add photos to this show gallery
 				</div>
-
 			{{- end -}}
 		</div>
+		{{- else -}}
+		<div class="md:width-10% lg:width-20% md:margin-right-md flex-grow-0 flex-shrink-0 margin-bottom-md rounded pos-relative">
+			{{- if ne "" .IconURL -}}
+				<img id="gallery-icon" src="{{ .IconURL }}" class="width-100% rounded square" aria-hidden="true" style="view-transition-name: icon-{{.StreamID}};">
+			{{- else -}}
+				<div class="rounded width-100% square text-center flex-column flex-justify-center flex-align-center text-gray" style="border:solid 1px var(--black)" script="install blockselect()">
+					Click here to add photos to this show gallery
+				</div>
+			{{- end -}}
+		</div>
+		{{- end -}}
 
 		<form class="flex-grow lg:margin-rigth">
 			<h2 id="gallery-name">

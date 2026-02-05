@@ -65,13 +65,7 @@
 		{target:"gallery", expression:"{{.ParentURL}}"}
 		{target:"library", expression:"{{.ParentURL}}/pub/children"}
 	]
-	roles: {
-		contributer: {
-			label: Contributer Gallery
-			description: Contributers are allowed to publish images and video to this photo album
-			privileged: true
-		}
-	}
+
 	search: {
 		type: Artwork
 		thumbUrl:"{{first .IconURL (join `/` .ParentID.Hex `/icon`)}}"
@@ -84,7 +78,7 @@
 
 	actions: {
 		create: {
-			roles: ["author", "contributer"]
+			roles: ["author"]
 			steps: [
 				{do: "as-modal", steps: [
 					{do: "view-html", file: "upload"}
@@ -122,14 +116,14 @@
 		}
 
 		upload: {
-			roles: ["author", "contributer"]
+			roles: ["author"]
 			steps: [
 				{do: "view-html"}
 			]
 		}
 
 		edit: {
-			roles: ["author", "contributer"]
+			roles: ["author"]
 			steps: [
 				{
 					do:"as-modal"
@@ -212,7 +206,7 @@
 		}
 
 		delete: {
-			roles: ["author", "contributer"],
+			roles: ["author"],
 			steps: [
 				{do:"delete", title:"Delete this Photo?"}
 				{do:"forward-to", url:"/{{.ParentID}}"}
@@ -220,7 +214,7 @@
 		}
 
 		delete-icon: {
-			roles: ["author", "contributer"],
+			roles: ["author"],
 			steps: [
 				{do: "delete-attachments"}
 				{do: "delete-attachments", fieldname:"iconUrl"}

@@ -49,11 +49,6 @@
 			label: Paid Gallery
 			description: Select the products that give special access to paid purchasers and subscribers
 			privileged: true
-		},
-		contributer: {
-			label: Contributer Gallery
-			description: Contributers are allowed to publish images and video to this photo album
-			privileged: true
 		}
 	}
 
@@ -159,7 +154,7 @@
 		}
 
 		view: {
-			roles: ["author", "contributer"]
+			roles: ["author"]
 			stateRoles: {
 				published: ["anonymous"]
 			}
@@ -270,7 +265,7 @@
 		}
 
 		add-creation: {
-			roles: ["author", "contributer"]
+			roles: ["author"]
 			steps: [
 				{
 					do: add-stream
