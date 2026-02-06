@@ -38,6 +38,7 @@
 			<h1 id="event-name" class="extra-bold margin-bottom-sm p-name">{{.Label}}</h1>
 			<div id="event-attributedTo"><a href="{{.AttributedTo.ProfileURL}}" hx-boost="true" class="text-lg text-gray">{{.AttributedTo.Name}}</a></div>
 			<h2 id="event-startDate">
+				<span id="event-startDate-Date" class="bold nowrap dt-start" >{{- .Name -}}</span>
 				<span id="event-startDate-Date" class="bold nowrap dt-start" datetime="{{.StartDate.String}}">{{- .StartDate | longDate -}}</span>
 				<span id="event-startDate-Time" class="text-light-gray nowrap">at {{ .StartDate | shortTime -}}</span>
 			</h2>
