@@ -398,6 +398,24 @@
 			]
 		}
 
+		upload: {
+			roles: ["author"]
+			steps: [
+				{do:"as-modal", steps:[
+					{do:"view-html"}
+					{do:"edit", form:{
+						type:"layout-vertical"
+						children:[
+							{type:"text", path:"attachmentLabel", label:"Label"}
+							{type:"textarea", path:"attachmentDescription", label:"Description", description:"A few words to show underneath the filename."}
+							{type:"upload", path:"file", label:"Attachment"}
+						]
+					}, options:["submit-label:Upload Attachment"]}
+					{do:"upload-attachments", category:"other", maximum:8, fieldname:"file", label-fieldname:"attachmentLabel", description-fieldname:"attachmentDescription"}
+					{do:"refresh-page"}
+				]}
+			]
+		}
 		premium-downloads: {
 			roles:["paid"]
 			steps: [
