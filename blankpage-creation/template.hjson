@@ -99,8 +99,8 @@
 						"iconUrl"
 					]}
 				]}
-				{do:"upload-attachments", category:"Artwork", fieldname:"data.attachmentId", download-path:"data.attachmentId", accept-type:"image/*", maximum:1, rules:{types:["webp", "jpg", "jpeg", "png", "gif"]}}
-				{do:"upload-attachments", action: "replace", category:"image", fieldname:"iconUrl", download-path:"iconUrl", accept-type:"image/*", maximum:1, rules:{width:200, height:200}, rules:{types:["webp", "jpeg", "png", "jpg", "gif"]}}
+				{do:"upload-attachments", category:"Artwork", fieldname:"data.attachmentId", download-path:"data.attachmentId", accept-type:"image/*", maximum:10, rules:{types:["webp", "jpg", "jpeg", "png", "gif"]}}
+				{do:"upload-attachments", action: "replace", category:"image", fieldname:"iconUrl", download-path:"iconUrl", accept-type:"image/*", maximum:10, rules:{width:200, height:200}, rules:{types:["webp", "jpeg", "png", "jpg", "gif"]}}
 				{do:"process-tags", paths:"data.tags"}
 				{do:"save-and-publish", outbox:false}
 				{do:"search-index"}
@@ -149,7 +149,7 @@
 										type: layout-vertical
 										label: Description
 										children: [
-											{type: "textarea", path: "data.summary", description:"Enter summary or creation description.  Displays on this creation's detail page.", options:{rows: 16}}
+											{type: "textarea", path: "data.summary", description:"Enter summary or creation description.  Displays on this photo's detail page.", options:{rows: 16}}
 											{type: "toggle", path: "data.mature", options:{true-text:"Mature Content", false-text:"Mature Content"}}
 										]
 									}
